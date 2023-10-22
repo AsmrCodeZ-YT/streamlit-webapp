@@ -1,8 +1,6 @@
 # WebApp Sreamlit : Audio Extractor 
 
-all file in pdf :
-
-![PDF](https://github.com/OWNER2PLUSAI/streamlit-webapp/blob/main/P%20%232%20-%20Audio%20Extractor/asset/Audio%20Extractor.pdf)
+all file in pdf [PDF](https://github.com/OWNER2PLUSAI/streamlit-webapp/blob/main/P%20%232%20-%20Audio%20Extractor/asset/Audio%20Extractor.pdf)
 
 ## ![image1](asset/1.png)
 
@@ -36,12 +34,13 @@ background = [
 
 st.title("Audio Extractor")
 try:
-    
+    # read css styel
     with open("./p2/style.css" , "r") as css:
         st.markdown(f"""<style>{css.read()}</style>""" %background[3] , unsafe_allow_html=True)
         
     f = st.file_uploader("", type=["mp4", "mkv"])
     
+    # main operation
     if f is not None:
         tfile = tempfile.NamedTemporaryFile(delete=False) 
         tfile.write(f.read())
@@ -50,7 +49,7 @@ try:
         audio.write_audiofile("./audio.mp3")
         st.title("DONE!")
         
-    # download
+    # download btn
     col1,col2 = st.columns([0.3,0.7])
     if "audio.mp3" in os.listdir():
         with open("./audio.mp3", "rb") as file:
