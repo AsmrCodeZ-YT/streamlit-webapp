@@ -1,0 +1,17 @@
+#root > div:nth-child(1) > div.withScreencast > div > div {
+    background-image:  url("%s");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    }
+.st-emotion-cache-x78sv8 p{
+    margin: 20px;
+    width: 167px;
+    height: 20px;
+    }
+#audio-extractor > div > span{
+    padding-left: 200px;
+}
+#done > div > span{
+    padding-left: 265px;
+}
